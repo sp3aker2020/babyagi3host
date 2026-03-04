@@ -26,6 +26,7 @@ export default function WebTerminal({ instanceId, wallet }: WebTerminalProps) {
         const { FitAddon } = await import('@xterm/addon-fit');
 
         // Import the CSS
+        // @ts-ignore
         await import('@xterm/xterm/css/xterm.css');
 
         // Clean up previous terminal
