@@ -1,0 +1,176 @@
+.page {
+    min-height: 100vh;
+    background: var(--bg-0);
+    overflow: hidden;
+}
+
+.nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+}
+
+.back {
+    color: var(--text-3);
+    font-size: 14px;
+    transition: color var(--transition);
+}
+
+.back:hover {
+    color: var(--text-0);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.subheading {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-1);
+}
+
+/* Plan section */
+.planSection {
+    padding: 32px;
+}
+
+.planOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.planOption {
+    width: 100%;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all var(--transition);
+}
+
+.planOption:hover {
+    border-color: var(--border-hover);
+}
+
+.planOptionActive {
+    border-color: var(--purple-500) !important;
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.planOptionName {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-0);
+}
+
+.planOptionPrice {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--purple-400);
+}
+
+.planOptionUsd {
+    font-size: 12px;
+    color: var(--text-3);
+}
+
+.planOptionDuration {
+    font-size: 12px;
+    color: var(--text-3);
+}
+
+/* Summary */
+.summaryCard {
+    padding: 28px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.summaryTotal {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.dimLabel {
+    color: var(--text-3);
+}
+
+/* Pay card */
+.payCard {
+    padding: 28px;
+}
+
+.error {
+    color: var(--red-400);
+    font-size: 13px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(248, 113, 113, 0.08);
+    border-radius: var(--radius-sm);
+}
+
+.secureNote {
+    color: var(--text-3);
+    font-size: 12px;
+    margin-top: 16px;
+    line-height: 1.5;
+}
+
+/* Success */
+.successCard {
+    padding: 36px;
+    text-align: center;
+}
+
+.successIcon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.successTitle {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+}
+
+.successSub {
+    color: var(--text-2);
+    font-size: 14px;
+}

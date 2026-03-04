@@ -1,0 +1,226 @@
+.page {
+    min-height: 100vh;
+    background: var(--bg-0);
+    overflow: hidden;
+}
+
+.nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    padding-bottom: 0;
+}
+
+.tab {
+    padding: 10px 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-3);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    transition: all var(--transition);
+}
+
+.tab:hover {
+    color: var(--text-1);
+}
+
+.tabActive {
+    color: var(--purple-400) !important;
+    border-bottom-color: var(--purple-500) !important;
+}
+
+.tabContent {
+    animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Setup alert */
+.setupAlert {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 22px;
+    background: rgba(250, 204, 21, 0.06);
+    border: 1px solid rgba(250, 204, 21, 0.2);
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+.setupAlert span {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.setupAlert strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.setupAlert p {
+    color: var(--text-2);
+}
+
+.alertLink {
+    background: none;
+    border: none;
+    color: var(--purple-400);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+}
+
+.alertLink:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+.formCard {
+    padding: 32px;
+    max-width: 640px;
+}
+
+.formTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.formDesc {
+    font-size: 14px;
+    color: var(--text-2);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.hint {
+    font-size: 12px;
+    color: var(--text-3);
+    margin-top: 6px;
+}
+
+.link {
+    color: var(--purple-400);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Guide */
+.guide {
+    padding: 20px;
+    background: var(--bg-2);
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+}
+
+.guideSteps {
+    list-style: none;
+    counter-reset: step;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guideSteps li {
+    counter-increment: step;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-1);
+    line-height: 1.5;
+}
+
+.guideSteps li::before {
+    content: counter(step);
+    min-width: 22px;
+    height: 22px;
+    background: var(--grad-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--purple-500);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
